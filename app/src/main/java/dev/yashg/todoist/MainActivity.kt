@@ -1,17 +1,21 @@
 package dev.yashg.todoist
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Button
-import androidx.compose.material.Text
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.outlined.OpenInNew
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -27,9 +31,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             val navController = rememberNavController()
             NotesAppTheme {
-                NavHost(navController, startDestination = "welcome") {
-                    composable("welcome") { WelcomeScreen(navController) }
-                    composable("home") { HomeScreen() }
+                NavHost(navController, startDestination = "home") {
+                    composable("home") { HomeScreen(navController) }
                 }
             }
         }
@@ -37,12 +40,21 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun HomeScreen() {
-    Text(text = "HomePage")
-}
-
-@Composable
-fun WelcomeScreen(navController: NavHostController) {
+fun HomeScreen(navController: NavHostController) {
+    val context = LocalContext.current
+    TopAppBar(
+        title = { Text("Welcome") },
+        navigationIcon = {
+            IconButton(onClick = {}) { Icon(Icons.Filled.Menu, contentDescription = null) }
+        },
+        actions = {
+            IconButton(
+                onClick = {
+                    Toast.makeText(context, "Opening in browser", Toast.LENGTH_SHORT).show()
+                }
+            ) { Icon(Icons.Outlined.OpenInNew, contentDescription = null) }
+        }
+    )
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
