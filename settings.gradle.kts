@@ -16,4 +16,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "NotesApp"
 
+enableFeaturePreview("VERSION_CATALOGS")
+
 include(":app")
