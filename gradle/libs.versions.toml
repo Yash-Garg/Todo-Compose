@@ -3,6 +3,7 @@ compose = "1.1.0"
 kotlin = "1.6.10"
 fragment = "1.4.1"
 navigation = "2.4.1"
+room = "2.4.2"
 
 [libraries]
 androidx-activity = "androidx.activity:activity-compose:1.4.0"
@@ -10,6 +11,8 @@ androidx-appcompat = "androidx.appcompat:appcompat:1.4.1"
 androidx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
 androidx-lifecycle = "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.0-alpha02"
 androidx-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }

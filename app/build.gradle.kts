@@ -2,10 +2,11 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.diffplug.spotless")
+    kotlin("kapt")
 }
 
 android {
-    compileSdk = 31
+    compileSdk = 32
 
     defaultConfig {
         applicationId = "dev.yashg.todoist"
@@ -28,11 +29,14 @@ android {
         }
         debug {}
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    kotlinOptions { jvmTarget = "1.8" }
+
+    kapt { correctErrorTypes = true }
+    kotlinOptions { jvmTarget = JavaVersion.VERSION_1_8.toString() }
     buildFeatures { compose = true }
     composeOptions { kotlinCompilerExtensionVersion = "1.1.0" }
     packagingOptions { resources { excludes += "/META-INF/{AL2.0,LGPL2.1}" } }
@@ -63,6 +67,9 @@ dependencies {
     implementation(libs.androidx.fragment)
     implementation(libs.androidx.lifecycle)
     implementation(libs.androidx.navigation)
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+
     implementation(libs.compose.foundation)
     implementation(libs.compose.material)
     implementation(libs.compose.material.icons.core)
