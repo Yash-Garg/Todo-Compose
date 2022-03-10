@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun HomeScreen() {
     Scaffold(
-        topBar = { TopAppBar(title = { Text(text = "HomePage") }) },
+        topBar = { TopAppBar(title = { Text(text = "Home") }) },
         floatingActionButton = {
             FloatingActionButton(
                 onClick = { /*TODO*/},

@@ -5,3 +5,5 @@ plugins {
     id("com.diffplug.spotless") version "6.2.2" apply false
     kotlin("kapt") version "1.6.10" apply false
 }
+
+buildscript { dependencies { classpath(libs.build.dagger.agp) } }
