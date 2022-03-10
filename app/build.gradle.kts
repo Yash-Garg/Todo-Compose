@@ -67,17 +67,20 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.fragment)
     implementation(libs.androidx.lifecycle)
-    implementation(libs.androidx.navigation)
-    implementation(libs.androidx.room.runtime)
+
+    implementation(libs.bundles.room)
     kapt(libs.androidx.room.compiler)
 
     implementation(libs.compose.foundation)
     implementation(libs.compose.material)
     implementation(libs.compose.material.icons.core)
     implementation(libs.compose.material.icons.extended)
+    implementation(libs.compose.navigation)
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling)
 
     implementation(libs.google.dagger.hilt)
     implementation(libs.google.dagger.hilt.compiler)
+
+    implementation(libs.kotlinx.coroutines)
 }
