@@ -14,7 +14,5 @@ interface TaskRepository {
 
     suspend fun getCompletedTasks(): Flow<List<Task>>
 
-    suspend fun orderTasks(isAsc: Boolean): Flow<List<Task>>
-
     suspend fun searchTasks(query: String): Flow<List<Task>>
 }

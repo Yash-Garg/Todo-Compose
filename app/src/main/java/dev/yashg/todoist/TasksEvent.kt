@@ -1,0 +1,12 @@
+package dev.yashg.todoist
+
+import dev.yashg.todoist.models.Task
+import dev.yashg.todoist.utils.TaskOrder
+
+sealed class TasksEvent {
+    data class Order(val taskOrder: TaskOrder) : TasksEvent()
+    data class DeleteTask(val task: Task) : TasksEvent()
+
+    object RestoreTask : TasksEvent()
+    object ToggleOrderSection : TasksEvent()
+}

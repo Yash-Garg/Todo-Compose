@@ -24,10 +24,6 @@ class TaskRepositoryImpl(private val dao: TaskDao) : TaskRepository {
         return dao.getCompletedTasks()
     }
 
-    override suspend fun orderTasks(isAsc: Boolean): Flow<List<Task>> {
-        return dao.orderTasks(isAsc)
-    }
-
     override suspend fun searchTasks(query: String): Flow<List<Task>> {
         return dao.searchTasks(query)
     }

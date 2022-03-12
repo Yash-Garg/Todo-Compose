@@ -17,13 +17,6 @@ interface TaskDao {
 
     @Query("SELECT * FROM task WHERE id IS :id") suspend fun getTaskById(id: Int): Task?
 
-    @Query(
-        "SELECT * FROM task ORDER BY " +
-            "CASE WHEN :isAsc = 1 THEN timestamp END ASC," +
-            "CASE WHEN :isAsc = 0 THEN timestamp END DESC"
-    )
-    suspend fun orderTasks(isAsc: Boolean): Flow<List<Task>>
-
     @Query("SELECT * FROM task WHERE title LIKE :query")
     suspend fun searchTasks(query: String): Flow<List<Task>>
 }
