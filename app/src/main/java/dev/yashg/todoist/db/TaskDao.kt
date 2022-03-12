@@ -7,6 +7,8 @@ import dev.yashg.todoist.models.Task
 
 @Dao
 interface TaskDao {
+    @Query("") fun saveTask(task: Task)
+
     @Query("SELECT * FROM task") fun getAllTasks(): List<Task>
 
     @Query("SELECT * FROM task WHERE completed is 1") fun getCompletedTasks(): List<Task>

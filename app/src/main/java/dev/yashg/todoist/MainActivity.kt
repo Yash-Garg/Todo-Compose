@@ -17,7 +17,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun HomeScreen() {
     Scaffold(
