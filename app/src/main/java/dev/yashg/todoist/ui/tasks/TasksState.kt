@@ -1,4 +1,4 @@
-package dev.yashg.todoist
+package dev.yashg.todoist.ui.tasks
 
 import dev.yashg.todoist.models.Task
 import dev.yashg.todoist.utils.OrderType

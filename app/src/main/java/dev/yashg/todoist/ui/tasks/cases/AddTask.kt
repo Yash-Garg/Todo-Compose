@@ -1,6 +1,6 @@
-package dev.yashg.todoist.utils
+package dev.yashg.todoist.ui.tasks.cases
 
-import dev.yashg.todoist.db.TaskRepository
+import dev.yashg.todoist.repository.TaskRepository
 import dev.yashg.todoist.models.InvalidTaskException
 import dev.yashg.todoist.models.Task
 

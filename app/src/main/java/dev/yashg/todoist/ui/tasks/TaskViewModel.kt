@@ -1,4 +1,4 @@
-package dev.yashg.todoist
+package dev.yashg.todoist.ui.tasks
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf

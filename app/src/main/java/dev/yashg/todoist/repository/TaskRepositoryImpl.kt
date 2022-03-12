@@ -1,5 +1,6 @@
-package dev.yashg.todoist.db
+package dev.yashg.todoist.repository
 
+import dev.yashg.todoist.db.TaskDao
 import dev.yashg.todoist.models.Task
 import kotlinx.coroutines.flow.Flow
 
