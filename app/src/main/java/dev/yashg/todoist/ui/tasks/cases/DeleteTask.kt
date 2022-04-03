@@ -1,7 +1,7 @@
 package dev.yashg.todoist.ui.tasks.cases
 
-import dev.yashg.todoist.repository.TaskRepository
 import dev.yashg.todoist.models.Task
+import dev.yashg.todoist.repository.TaskRepository
 
 class DeleteTask(private val repository: TaskRepository) {
 

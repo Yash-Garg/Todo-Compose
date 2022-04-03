@@ -1,7 +1,7 @@
 package dev.yashg.todoist.ui.tasks.cases
 
-import dev.yashg.todoist.repository.TaskRepository
 import dev.yashg.todoist.models.Task
+import dev.yashg.todoist.repository.TaskRepository
 import dev.yashg.todoist.utils.OrderType
 import dev.yashg.todoist.utils.TaskOrder
 import kotlinx.coroutines.flow.Flow

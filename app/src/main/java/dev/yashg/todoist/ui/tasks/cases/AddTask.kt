@@ -1,8 +1,8 @@
 package dev.yashg.todoist.ui.tasks.cases
 
-import dev.yashg.todoist.repository.TaskRepository
 import dev.yashg.todoist.models.InvalidTaskException
 import dev.yashg.todoist.models.Task
+import dev.yashg.todoist.repository.TaskRepository
 
 class AddTask(private val repository: TaskRepository) {
 

@@ -7,9 +7,9 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dev.yashg.todoist.db.TaskDatabase
+import dev.yashg.todoist.models.TaskUseCases
 import dev.yashg.todoist.repository.TaskRepository
 import dev.yashg.todoist.repository.TaskRepositoryImpl
-import dev.yashg.todoist.models.TaskUseCases
 import dev.yashg.todoist.ui.tasks.cases.AddTask
 import dev.yashg.todoist.ui.tasks.cases.DeleteTask
 import dev.yashg.todoist.ui.tasks.cases.GetTasks

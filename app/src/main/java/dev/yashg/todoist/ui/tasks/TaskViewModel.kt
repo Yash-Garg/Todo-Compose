@@ -19,7 +19,7 @@ import kotlinx.coroutines.launch
 class TaskViewModel @Inject constructor(private val taskUseCases: TaskUseCases) : ViewModel() {
 
     private val _state = mutableStateOf(TasksState())
-    private val state: State<TasksState> = _state
+    val state: State<TasksState> = _state
 
     private var recentlyDeletedTask: Task? = null
     private var tasksJob: Job? = null
